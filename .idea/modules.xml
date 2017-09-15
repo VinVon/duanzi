@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/baselibrary/baselibrary.iml" filepath="$PROJECT_DIR$/baselibrary/baselibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/butterknife-compiler/butterknife-compiler.iml" filepath="$PROJECT_DIR$/butterknife-compiler/butterknife-compiler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demoaop/demoaop.iml" filepath="$PROJECT_DIR$/demoaop/demoaop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demoprocessor/demoprocessor.iml" filepath="$PROJECT_DIR$/demoprocessor/demoprocessor.iml" />
       <module fileurl="file://$PROJECT_DIR$/duanzi.iml" filepath="$PROJECT_DIR$/duanzi.iml" />
       <module fileurl="file://$PROJECT_DIR$/framelibrary/framelibrary.iml" filepath="$PROJECT_DIR$/framelibrary/framelibrary.iml" />
     </modules>

@@ -1,16 +1,19 @@
-package com.baseLibrary.ioc;
+package com.example;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-/**
- *
- * Created by raytine on 2017/8/14.
- */
-@Target(ElementType.FIELD)
 @Retention(RetentionPolicy.CLASS)
-public @interface ViewById {
-    int value();
+@Target(ElementType.TYPE)
+public @interface BindView {
+    /**
+     * 包名
+     */
+    String packageName();
+    /**
+     * 类的Class
+     */
+    Class<?> entryClass();
 }
