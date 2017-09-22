@@ -102,7 +102,10 @@ public abstract class AbsNavigationBar<P extends AbsNavigationBar.Builder.AbsNag
      */
     private void createAndBindView() {
         if (mParams.mParent == null){
-            ViewGroup activityRoot = (ViewGroup) ((Activity)mParams.mContext).findViewById(android.R.id.content);
+            /**
+             * 获取decorView-->获取screen_simple布局(LinearLayout)-->不用考虑activity的布局添加头部
+             */
+            ViewGroup activityRoot = (ViewGroup) ((Activity)mParams.mContext).getWindow().getDecorView();
             mParams.mParent = (ViewGroup) activityRoot.getChildAt(0);
         }
         //1.创建View
