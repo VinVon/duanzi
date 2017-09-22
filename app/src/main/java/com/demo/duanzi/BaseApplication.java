@@ -17,9 +17,6 @@ public class BaseApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
-
-
-
         ExceptionCrashHandler.newInstance().init(this);
 //        patchManager = new PatchManager(this);
 //        String appVersionName = AppVersionUtils.getAppVersionName(this);
