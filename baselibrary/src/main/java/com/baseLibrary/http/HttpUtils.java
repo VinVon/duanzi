@@ -1,6 +1,7 @@
 package com.baseLibrary.http;
 
 import android.content.Context;
+import android.util.Log;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,7 +14,7 @@ public class HttpUtils implements IHttpEngine {
     //参数链式调用
     private String mUrl;
     private int m_Type = GET_TYPE;
-    private static final int POST_TYPE = 0X0011;
+    private static final int POST_TYPE = 0X0012;
     private static final int GET_TYPE = 0X0011;
     private Map<String,Object> mParams;
     private Context mContext;
@@ -60,6 +61,7 @@ public class HttpUtils implements IHttpEngine {
      * @return
      */
     public void execute(EngineCallBack callBack) {
+        Log.e("TAG->HttpUtils",mIHttpEngine.getClass().getName());
         if (callBack == null){
             callBack = EngineCallBack.DEFAULT_CALL_BACK;
         }
@@ -91,8 +93,9 @@ public class HttpUtils implements IHttpEngine {
      *
      * @param httpEngine
      */
-    public void exchangeEngine(IHttpEngine httpEngine) {
+    public HttpUtils exchangeEngine(IHttpEngine httpEngine) {
         mIHttpEngine = httpEngine;
+        return this;
     }
 
     /**
